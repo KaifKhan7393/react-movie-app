@@ -24,7 +24,7 @@ const MovieDetails = () => {
                 <>
                     <SectioniLeft>
                         <MovieTitle>
-                            <h1>{data.Title}</h1>
+                            <MovieTitle>{data.Title}</MovieTitle>
                             <MovieRating>
                                 <span>
                                     IMDB Rating ⭐: {data.imdbRating}
@@ -77,7 +77,7 @@ const MovieDetails = () => {
 const MovieSection = styled.div`
     display:flex;
     justify-content:space-evenly;
-    padding:40px;
+    padding:5%;
     color:#ffffff;
     font-weight:400;
     @media (max-width:500px){
@@ -89,7 +89,7 @@ const SectioniLeft = styled.div`
 `
 
 const MovieTitle = styled.div`
-    font-size:20px;
+    font-size:25px;
     color:#ffffff;
 `
 const MovieRating = styled.div`

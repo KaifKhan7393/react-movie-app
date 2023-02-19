@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import PageNotFound from './components/PageNotFound';
 const App = () => {
+
   return (
     <div className="app">
       <Router>
@@ -25,7 +26,7 @@ const App = () => {
 }
 
 const Conatainer = styled.div`
-  maring:0 40px;
+  margin:0 5%;
 `
 
 export default App

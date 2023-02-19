@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import movieApi from '../common/apis/movieApi';
-import { ApiKey } from '../common/apis/MovieApiKey';
 
+
+const ApiKey = import.meta.env.VITE_APP_APIKEY;
 export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', async (term) => {
     const response = await movieApi.get(`?apiKey=${ApiKey}&s=${term}&type=movie`);
     return response.data;
@@ -34,7 +35,7 @@ export const movieSlice = createSlice({
     },
     extraReducers: {
         [fetchAsyncMovies.pending]: () => {
-            console.log("Peiding...")
+            console.log("Pending...")
         },
         [fetchAsyncMovies.fulfilled]: (state, { payload }) => {
             console.log("Fetched Successfully!");
